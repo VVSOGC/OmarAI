@@ -6,7 +6,7 @@ from flask import Flask, request, render_template_string
 from transformers import pipeline
 
 app = Flask(__name__)
-chatbot = pipeline("text-generation", model="gpt2")
+chatbot = pipeline("text-generation", model="sshleifer/tiny-gpt2")
 
 HTML_TEMPLATE = '''
 <!DOCTYPE html>
