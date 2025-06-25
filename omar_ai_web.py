@@ -39,8 +39,7 @@ def chat():
             result = chatbot(user_input, max_length=50, do_sample=True, top_k=50)[0]['generated_text']
             response = result.strip().replace("\n", " ")
     return render_template_string(HTML_TEMPLATE, response=response)
-
-if __name__ == "__main__":
-import os
-port = int(os.environ.get("PORT", 5000))
-app.run(host="0.0.0.0", port=port)
+    if __name__ == "__main__":
+        import os
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host="0.0.0.0", port=port)
